@@ -102,3 +102,6 @@ impl From<Error> for password_hash::Error {
         }
     }
 }
+
+#[cfg(feature = "std")]
+impl std::error::Error for Error {}
